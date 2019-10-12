@@ -1,2 +1,1 @@
-# reifnotreef.dev
-Placeholder landing page
+# Simple WIP portfolio placeholder

@@ -1,12 +1,10 @@
 {
-  "homepage": "http://reifnotreef.github.io/",
+  "homepage": "http://reifnotreef.dev",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "axios": "^0.19.2",

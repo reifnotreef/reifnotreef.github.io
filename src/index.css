@@ -10,3 +10,19 @@ body {
 #root {
   padding-bottom: 2rem;
 }
+
+.project-links {
+  display: inline-block;
+  padding-left: 1rem;
+  position: relative;
+  bottom: -0.3rem;
+}
+
+@media only screen and (min-width: 720px) {
+  .navigation-container {
+    top: 0;
+  }
+  #root {
+    margin-top: 2rem;
+  }
+}

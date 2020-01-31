@@ -5,27 +5,43 @@ import WebIcon from '@material-ui/icons/Web';
 
 const ProjectCard = props => {
   return (
-    <section className='project-card' key={props.project.id}>
-      <h3 className='project-name'>{props.project.name}</h3>
-      {props.project.homepageUrl !== '' ? (
+    <section
+      className='project-card'
+      key={props.project.id}
+      style={{ borderTop: '1px solid black' }}
+    >
+      <div>
+        <h3
+          className='project-name'
+          style={{ display: 'inline-block', margin: 0 }}
+        >
+          {props.project.name}
+        </h3>
         <a
+          className='project-links'
           target='_blank'
           rel='noopener noreferrer'
-          href={props.project.homepageUrl}
+          href={props.project.url}
+          style={{ display: 'inline-block', paddingLeft: '1rem' }}
         >
-          <WebIcon htmlColor='black' />
+          <GitHubIcon htmlColor='black' />
         </a>
-      ) : (
-        <></>
-      )}
-      <a
-        target='_blank'
-        rel='noopener noreferrer'
-        href={props.project.projectsUrl}
-      >
-        <GitHubIcon htmlColor='black' />
-      </a>
-      <p className='project-description'>About: {props.project.description}</p>
+        {props.project.homepageUrl !== '' ? (
+          <a
+            className='project-links'
+            target='_blank'
+            rel='noopener noreferrer'
+            href={props.project.homepageUrl}
+          >
+            <WebIcon htmlColor='black' />
+          </a>
+        ) : (
+          <></>
+        )}
+      </div>
+      <p className='project-description' style={{ maxWidth: '60rem' }}>
+        About: {props.project.description}
+      </p>
       <p className='project-languages'>
         {props.project.languages.edges.length > 1 ? (
           <>Languages</>
@@ -33,9 +49,11 @@ const ProjectCard = props => {
           <>Language</>
         )}
         :{' '}
-        {props.project.languages.edges.map(i => (
-          <p>{i.node.name}</p>
-        ))}
+        <ul>
+          {props.project.languages.edges.map(i => (
+            <li>{i.node.name}</li>
+          ))}
+        </ul>
       </p>
     </section>
   );

@@ -13,7 +13,7 @@ const query = `query {
             name
             description
             id
-            projectsUrl
+            url
             languages(first: 6) {
               edges {
                 node {

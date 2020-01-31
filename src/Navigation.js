@@ -17,6 +17,7 @@ export const Navigation = () => {
         display: 'flex',
         justifyContent: 'space-around'
       }}
+      className='navigation-container'
     >
       <a href='#root'>
         <HomeIcon htmlColor='white' />

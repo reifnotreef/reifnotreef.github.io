@@ -23,11 +23,20 @@ const Header = () => {
         src={user.avatarUrl}
         alt='me'
         className='profile-image'
-        style={{ height: '20rem', borderRadius: '50%' }}
+        style={{
+          height: '20rem',
+          width: '20rem',
+          borderRadius: '50%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          display: 'block'
+        }}
       />
-      <h4>{user.name}</h4>
-      <p>looking for work: {user.isHireable === true ? 'yep' : 'nope'}</p>
-      <p>bio: {user.bio}</p>
+      <div>
+        <h4>{user.name}</h4>
+        <p>looking for work: {user.isHireable === true ? 'yep' : 'nope'}</p>
+        <p style={{ maxWidth: '60rem' }}>bio: {user.bio}</p>
+      </div>
     </section>
   );
 };

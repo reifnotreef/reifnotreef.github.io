@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 
 // this is a read only token
-const token = process.env.REACT_APP_API_KEY;
+const token = 'ff34c19c069cdfb84151fc4ee9d1806563dc0cf8';
 const query = `query {
     user(login:"reifnotreef") {
     pinnedItems(first: 6, types: [REPOSITORY]) {

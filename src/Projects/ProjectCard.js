@@ -9,7 +9,7 @@ const ProjectCard = props => {
         how (mostly): {props.project.primaryLanguage.name}
       </p>
       <p className='project-code-link'>
-        where:
+        where:{' '}
         <a
           target='_blank'
           rel='noopener noreferrer'

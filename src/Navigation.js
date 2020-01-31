@@ -1,4 +1,4 @@
-import BottomNavigation from '@material-ui/core/BottomNavigation';
+// import BottomNavigation from '@material-ui/core/BottomNavigation';
 import HomeIcon from '@material-ui/icons/Home';
 import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -7,7 +7,7 @@ import React from 'react';
 
 export const Navigation = () => {
   return (
-    <BottomNavigation
+    <div
       style={{
         width: '100%',
         position: 'fixed',
@@ -15,27 +15,35 @@ export const Navigation = () => {
         height: '1.6rem',
         backgroundColor: 'black',
         display: 'flex',
-        justifyContent: 'space-around'
+        justifyContent: 'center'
       }}
       className='navigation-container'
     >
-      <a href='#root'>
-        <HomeIcon htmlColor='white' />
-      </a>
-      <a
-        href='mailto:bridgerrhammond@gmail.com'
-        target='_blank'
-        rel='noopener noreferrer'
+      <div
+        style={{
+          width: '60rem',
+          display: 'flex',
+          justifyContent: 'space-evenly'
+        }}
       >
-        <EmailIcon htmlColor='white' />
-      </a>
-      <a
-        href='https://github.com/reifnotreef'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <GitHubIcon htmlColor='white' />
-      </a>
-    </BottomNavigation>
+        <a href='#root'>
+          <HomeIcon htmlColor='white' />
+        </a>
+        <a
+          href='mailto:bridgerrhammond@gmail.com'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <EmailIcon htmlColor='white' />
+        </a>
+        <a
+          href='https://github.com/reifnotreef'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <GitHubIcon htmlColor='white' />
+        </a>
+      </div>
+    </div>
   );
 };

@@ -49,12 +49,12 @@ const ProjectCard = props => {
           <>Language</>
         )}
         :{' '}
-        <ul>
-          {props.project.languages.edges.map(i => (
-            <li>{i.node.name}</li>
-          ))}
-        </ul>
       </p>
+      <ul>
+        {props.project.languages.edges.map((i, key) => (
+          <li key={key}>{i.node.name}</li>
+        ))}
+      </ul>
     </section>
   );
 };

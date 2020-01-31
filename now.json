@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "wip-portfolio",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "homepage": "http://reifnotreef.github.io/wip_portfolio",
+  "homepage": "http://reifnotreef.github.io/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

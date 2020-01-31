@@ -1,6 +1,5 @@
 const fetch = require('node-fetch');
 
-// this is a read only token
 const token = process.env.REACT_APP_API_KEY;
 const query = `query {
     user(login: "reifnotreef") {

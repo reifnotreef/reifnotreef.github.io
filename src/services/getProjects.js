@@ -3,14 +3,23 @@ const fetch = require('node-fetch');
 // this is a read only token
 const token = process.env.REACT_APP_API_KEY;
 const query = `query {
-    user(login:"reifnotreef") {
+  user(login: "reifnotreef") {
     pinnedItems(first: 6, types: [REPOSITORY]) {
       totalCount
       edges {
         node {
           ... on Repository {
-            name, description, id, projectsUrl, primaryLanguage {
-              name
+            homepageUrl
+            name
+            description
+            id
+            projectsUrl
+            languages(first: 6) {
+              edges {
+                node {
+                  name
+                }
+              }
             }
           }
         }

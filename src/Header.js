@@ -32,7 +32,7 @@ const Header = () => {
           display: 'block'
         }}
       />
-      <div>
+      <div className='header-copy'>
         <h4>{user.name}</h4>
         <p>looking for work: {user.isHireable === true ? 'yep' : 'nope'}</p>
         <p style={{ maxWidth: '60rem' }}>bio: {user.bio}</p>

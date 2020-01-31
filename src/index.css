@@ -11,6 +11,12 @@ body {
   padding-bottom: 2rem;
 }
 
+.projects-container,
+.header-copy {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .project-links {
   display: inline-block;
   padding-left: 1rem;
@@ -23,6 +29,7 @@ body {
     top: 0;
   }
   #root {
-    margin-top: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 0;
   }
 }

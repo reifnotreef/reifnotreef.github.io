@@ -13,8 +13,8 @@ const Header = () => {
   return user == null ? (
     <Loading />
   ) : (
-    <section>
-      <img src={user.avatarUrl} alt='me' />
+    <section className='header-container'>
+      <img src={user.avatarUrl} alt='me' className='profile-image' />
       <h4>{user.name}</h4>
       <p>
         contact:{' '}
@@ -26,8 +26,8 @@ const Header = () => {
           email
         </a>
       </p>
-      <p>bio: {user.bio}</p>
       <p>looking for work: {user.isHireable === true ? 'yep' : 'nope'}</p>
+      <p>bio: {user.bio}</p>
     </section>
   );
 };

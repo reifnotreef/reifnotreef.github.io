@@ -12,16 +12,18 @@ const ProjectsContainer = () => {
   }, []);
 
   return (
-    <section id='projects-container'>
-      <section id='projects-header'>
+    <>
+      <section className='projects-header'>
         <h1>My Projects</h1>
+      </section>
+      <section className='projects-container'>
         {projects && projects.length > 0 ? (
           projects.map(i => <ProjectCard project={i} key={i.id} />)
         ) : (
           <Loading />
         )}
       </section>
-    </section>
+    </>
   );
 };
 

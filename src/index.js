@@ -8,14 +8,10 @@ import Header from './Header/Header';
 class App extends Component {
   render() {
     return (
-      <div>
-        <div>
-          <Header />
-        </div>
-        <main>
-          <ProjectsContainer />
-        </main>
-      </div>
+      <>
+        <Header />
+        <ProjectsContainer className='projects-container' />
+      </>
     );
   }
 }

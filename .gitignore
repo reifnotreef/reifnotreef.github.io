@@ -62,3 +62,4 @@ typings/
 .gitkey
 .env.deployment
 .env.production
+.env.build

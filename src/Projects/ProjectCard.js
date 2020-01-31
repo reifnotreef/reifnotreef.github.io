@@ -40,7 +40,7 @@ const ProjectCard = props => {
         )}
       </div>
       <p className='project-description' style={{ maxWidth: '60rem' }}>
-        About: {props.project.description}
+        {props.project.description}
       </p>
       <p className='project-languages'>
         {props.project.languages.edges.length > 1 ? (

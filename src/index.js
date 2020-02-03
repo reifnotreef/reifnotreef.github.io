@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import ProjectsContainer from './Projects/ProjectsContainer';
+import Header from './Header';
+
 import './index.css';
-import Header from './Header/Header';
+import { Navigation } from './Navigation';
 
 class App extends Component {
   render() {
@@ -11,6 +13,7 @@ class App extends Component {
       <>
         <Header />
         <ProjectsContainer className='projects-container' />
+        <Navigation />
       </>
     );
   }

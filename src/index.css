@@ -18,6 +18,10 @@ body {
   padding-bottom: 2rem;
 }
 
+.header-container {
+  padding-top: 1rem;
+}
+
 .projects-container,
 .header-copy {
   padding-left: 2rem;

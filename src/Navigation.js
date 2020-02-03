@@ -13,7 +13,8 @@ export const Navigation = () => {
         width: '100%',
         position: 'fixed',
         bottom: 0,
-        height: '1.6rem',
+        height: '2rem',
+        paddingTop: '0.25rem',
         backgroundColor: 'black',
         display: 'flex',
         justifyContent: 'center'

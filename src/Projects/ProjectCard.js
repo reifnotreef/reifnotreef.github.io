@@ -42,14 +42,7 @@ const ProjectCard = props => {
       <p className='project-description' style={{ maxWidth: '60rem' }}>
         {props.project.description}
       </p>
-      <p className='project-languages'>
-        {props.project.languages.edges.length > 1 ? (
-          <>Languages</>
-        ) : (
-          <>Language</>
-        )}
-        :{' '}
-      </p>
+      <p className='project-languages'>Languages: </p>
       <ul>
         {props.project.languages.edges.map((i, key) => (
           <li key={key}>{i.node.name}</li>

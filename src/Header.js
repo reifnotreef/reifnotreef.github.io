@@ -40,6 +40,7 @@ const Header = () => {
           hirable:{' '}
           {user.isHireable === true ? (
             <CheckCircleOutlineIcon
+              className='hireable-icon'
               htmlColor='black'
               style={{
                 display: 'inline-block',
@@ -49,6 +50,7 @@ const Header = () => {
             />
           ) : (
             <HighlightOffIcon
+              className='hireable-icon'
               htmlColor='black'
               style={{
                 display: 'inline-block',

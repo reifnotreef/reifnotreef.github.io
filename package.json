@@ -1,5 +1,13 @@
 {
   "homepage": "http://reifnotreef.dev",
+  "version": "1.0.0",
+  "description": "WIP portfolio",
+  "keywords": [],
+  "author": "reifnotreef",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reifnotreef/reifnotreef.github.io/issues"
+  },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",

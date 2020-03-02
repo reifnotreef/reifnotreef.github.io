@@ -2,6 +2,8 @@
 import HomeIcon from '@material-ui/icons/Home';
 import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 
 import React from 'react';
 
@@ -12,7 +14,8 @@ export const Navigation = () => {
         width: '100%',
         position: 'fixed',
         bottom: 0,
-        height: '1.6rem',
+        height: '2rem',
+        paddingTop: '0.25rem',
         backgroundColor: 'black',
         display: 'flex',
         justifyContent: 'center'
@@ -42,6 +45,20 @@ export const Navigation = () => {
           rel='noopener noreferrer'
         >
           <GitHubIcon htmlColor='white' />
+        </a>
+        <a
+          href='https://www.linkedin.com/in/bridgerhammond/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <LinkedInIcon htmlColor='white' />
+        </a>
+        <a
+          href='https://github.com/reifnotreef/reifnotreef.github.io/raw/deploy/public/BRH_Resume.pdf'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <PictureAsPdfIcon htmlColor='white' />
         </a>
       </div>
     </div>

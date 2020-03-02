@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import Skeleton from '@material-ui/lab/Skeleton';
 import getUser from './services/getUser';
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 
 const Header = () => {
   const [user, setUser] = useState(null);
@@ -34,8 +36,31 @@ const Header = () => {
       />
       <div className='header-copy'>
         <h4>{user.name}</h4>
-        <p>looking for work: {user.isHireable === true ? 'yep' : 'nope'}</p>
-        <p style={{ maxWidth: '60rem' }}>bio: {user.bio}</p>
+        <p>
+          hirable:{' '}
+          {user.isHireable === true ? (
+            <CheckCircleOutlineIcon
+              className='hireable-icon'
+              htmlColor='black'
+              style={{
+                display: 'inline-block',
+                position: 'relative',
+                top: '5px'
+              }}
+            />
+          ) : (
+            <HighlightOffIcon
+              className='hireable-icon'
+              htmlColor='black'
+              style={{
+                display: 'inline-block',
+                position: 'relative',
+                top: '5px'
+              }}
+            />
+          )}
+        </p>
+        <p style={{ maxWidth: '60rem' }}>about me: {user.bio}</p>
       </div>
     </section>
   );

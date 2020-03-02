@@ -1,6 +1,13 @@
+@font-face {
+  font-family: 'Cascadia Code Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Cascadia Code Regular'), url('Cascadia.woff') format('woff');
+}
+
 * {
   box-sizing: border-box;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Cascadia Code Regular', monospace;
 }
 
 body {
@@ -9,6 +16,10 @@ body {
 
 #root {
   padding-bottom: 2rem;
+}
+
+.header-container {
+  padding-top: 1rem;
 }
 
 .projects-container,

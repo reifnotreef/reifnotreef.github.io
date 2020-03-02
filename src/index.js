@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
-import ProjectsContainer from './Projects/ProjectsContainer';
-import Header from './Header';
+import ProjectsContainer from "./Projects/ProjectsContainer";
+import Header from "./Header";
 
-import './index.css';
-import { Navigation } from './Navigation';
+import "./index.css";
+import { Navigation } from "./Navigation";
 
 class App extends Component {
   render() {
     return (
       <>
         <Header />
-        <ProjectsContainer className='projects-container' />
+        <ProjectsContainer className="projects-container" />
         <Navigation />
       </>
     );
   }
 }
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(<App />, document.querySelector("#root"));

@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+const fetch = require("node-fetch");
 
 // this is a read only token
 const token = process.env.REACT_APP_API_KEY;
@@ -31,8 +31,8 @@ const query = `query {
 const getProjects = async () => {
   const Projects = [];
 
-  await fetch('https://api.github.com/graphql', {
-    method: 'POST',
+  await fetch("https://api.github.com/graphql", {
+    method: "POST",
     body: JSON.stringify({ query }),
     headers: {
       Authorization: `Bearer ${token}`

@@ -8,6 +8,7 @@ const query = `query {
       email
       isHireable
       name
+      company
     }
   }`;
 

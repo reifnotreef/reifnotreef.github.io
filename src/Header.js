@@ -61,7 +61,7 @@ const Header = () => {
           )}
         </p>
         <p style={{ maxWidth: '60rem' }}>about me: {user.bio}</p>
-        <p style={{ maxWidth: '60rem' }}>company: <a href=`${user.company}` /></p>
+        <p style={{ maxWidth: '60rem' }}>company: <a href={user.company} /></p>
       </div>
     </section>
   );

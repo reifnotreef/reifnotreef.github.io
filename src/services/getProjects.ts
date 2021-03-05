@@ -40,7 +40,7 @@ const getProjects = async (): Promise<Project[]> => {
   })
     .then((res: any) => res.json())
     .then((res: any) =>
-      res?.data?.user?.pinnedItems?.edges?.map((i: any) => i?.node as Project)
+      res?.data?.user?.pinnedItems?.edges?.map((i: {node: Project}) => i?.node)
     );
   return Projects;
 };

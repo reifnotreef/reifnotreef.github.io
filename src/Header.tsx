@@ -5,11 +5,19 @@ import getUser from './services/getUser';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 
-const Header = () => {
-  const [user, setUser] = useState(null);
+type User = {
+  avatarUrl: string;
+  name: string;
+  isHireable: boolean;
+  bio: string;
+  company: string;
+};
+
+const Header: React.FC = () => {
+  const [user, setUser] = useState<User>();
 
   useEffect(() => {
-    getUser().then(info => setUser(info));
+    getUser().then((info: User) => setUser(info));
   }, []);
 
   return user == null ? (

@@ -1,4 +1,5 @@
-const fetch = require("node-fetch");
+import { Project } from "../Projects/ProjectCard";
+import fetch from "node-fetch";
 
 // this is a read only token
 const token = process.env.REACT_APP_API_KEY;
@@ -28,21 +29,19 @@ const query = `query {
   }
 }`;
 
-const getProjects = async () => {
-  const Projects = [];
-
-  await fetch("https://api.github.com/graphql", {
+const getProjects = async (): Promise<Project[]> => {
+  // const Projects: Project[] = [];
+  const Projects: Project[] = await fetch("https://api.github.com/graphql", {
     method: "POST",
     body: JSON.stringify({ query }),
     headers: {
-      Authorization: `Bearer ${token}`
-    }
+      Authorization: `Bearer ${token}`,
+    },
   })
-    .then(res => res.json())
-    .then(res =>
-      res.data.user.pinnedItems.edges.forEach(i => Projects.push(i.node))
-    )
-    .catch(error => console.error(error));
+    .then((res: any) => res.json())
+    .then((res: any) =>
+      res?.data?.user?.pinnedItems?.edges?.map((i: any) => i?.node as Project)
+    );
   return Projects;
 };
 

@@ -1,4 +1,3 @@
-// import BottomNavigation from '@material-ui/core/BottomNavigation';
 import HomeIcon from '@material-ui/icons/Home';
 import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';

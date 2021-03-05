@@ -20,9 +20,9 @@ const getUser = async () => {
       Authorization: `Bearer ${token}`
     }
   })
-    .then(res => res.json())
-    .then(res => res.data.user)
-    .catch(error => console.error(error));
+    .then((res: any) => res.json())
+    .then((res: any) => res.data.user)
+    .catch((error: any) => console.error(error));
 };
 
 export default getUser;

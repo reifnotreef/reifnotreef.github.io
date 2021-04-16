@@ -53,7 +53,7 @@ export const Navigation = () => {
           <LinkedInIcon htmlColor='white' />
         </a>
         <a
-          href='https://github.com/reifnotreef/reifnotreef.github.io/raw/deploy/img/BRH_Resume.pdf'
+          href='/Resume-Bridger-Hammond.pdf'
           target='_blank'
           rel='noopener noreferrer'
         >

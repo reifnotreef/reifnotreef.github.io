@@ -1,9 +1,47 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import getUser from "./services/getUser";
+import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
+import makeStyles from "@material-ui/styles/makeStyles/makeStyles";
 
-import Skeleton from '@material-ui/lab/Skeleton';
-import getUser from './services/getUser';
-import HighlightOffIcon from '@material-ui/icons/HighlightOff';
-import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+const useStyles = makeStyles({
+  avatarUrl: {
+    height: "20rem",
+    width: "20rem",
+    borderRadius: "50%",
+    marginLeft: "auto",
+    marginRight: "auto",
+    display: "block",
+    "@media only screen and (min-width: 720px)": {
+      marginTop: "2rem",
+    },
+  },
+  headerContainer: {
+    paddingTop: "1rem",
+  },
+  headerCopy: {
+    paddingLeft: "2rem",
+    paddingRight: "2rem",
+  },
+  hireableWrapper: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-start",
+  },
+  hireableIcon: {
+    color: "black",
+    display: "inline-block",
+    alignSelf: "center",
+  },
+  about: { maxWidth: 420, marginTop: "0.5rem", marginBottom: "0.5rem" },
+  company: {
+    textDecoration: "none",
+    color: "black",
+    marginTop: "0.5rem",
+    marginBottom: "0.5rem",
+  },
+});
 
 type User = {
   avatarUrl: string;
@@ -20,56 +58,28 @@ const Header: React.FC = () => {
     getUser().then((info: User) => setUser(info));
   }, []);
 
-  return user == null ? (
-    <Skeleton
-      variant='circle'
-      animation='pulse'
-      height={'20rem'}
-      width={'20rem'}
-    />
-  ) : (
-    <section className='header-container'>
-      <img
-        src={user.avatarUrl}
-        alt='me'
-        className='profile-image'
-        style={{
-          height: '20rem',
-          width: '20rem',
-          borderRadius: '50%',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          display: 'block'
-        }}
-      />
-      <div className='header-copy'>
-        <h4>{user.name}</h4>
-        <p>
-          hirable:{' '}
-          {user.isHireable === true ? (
-            <CheckCircleOutlineIcon
-              className='hireable-icon'
-              htmlColor='black'
-              style={{
-                display: 'inline-block',
-                position: 'relative',
-                top: '5px'
-              }}
-            />
+  const styles = useStyles();
+
+  return (
+    <section className={styles.headerContainer}>
+      <img src={user?.avatarUrl} alt="me" className={styles.avatarUrl} />
+      <div className={styles.headerCopy}>
+        <h4>{user?.name}</h4>
+        <div className={styles.hireableWrapper}>
+          hirable:{" "}
+          {user?.isHireable ? (
+            <CheckCircleOutlineIcon className={styles.hireableIcon} />
           ) : (
-            <HighlightOffIcon
-              className='hireable-icon'
-              htmlColor='black'
-              style={{
-                display: 'inline-block',
-                position: 'relative',
-                top: '5px'
-              }}
-            />
+            <HighlightOffIcon className={styles.hireableIcon} />
           )}
+        </div>
+        <p className={styles.about}>about me: {user?.bio}</p>
+        <p className={styles.about}>
+          company:{" "}
+          <a className={styles.company} href={user?.company}>
+            {user?.company}
+          </a>
         </p>
-        <p style={{ maxWidth: '60rem' }}>about me: {user.bio}</p>
-        <p style={{ maxWidth: '60rem' }}>company: <a href={user.company} style={{ textDecoration: 'none' }}>Dottid</a></p>
       </div>
     </section>
   );

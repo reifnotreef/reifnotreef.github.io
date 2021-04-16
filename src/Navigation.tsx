@@ -3,31 +3,36 @@ import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
+import makeStyles from '@material-ui/styles/makeStyles/makeStyles';
 
 import React from 'react';
 
-export const Navigation = () => {
+const useStyles = makeStyles({
+  navWrapper: {
+    width: '100%',
+    position: 'fixed',
+    bottom: 0,
+    height: '2rem',
+    backgroundColor: 'black',
+    display: 'flex',
+    justifyContent: 'center',
+    paddingTop: '0.25rem',
+    '@media only screen and (min-width: 720px)': {
+      top: 0,
+    }
+  },
+  innerWrapper: {
+    width: '60rem',
+    display: 'flex',
+    justifyContent: 'space-evenly'
+  },
+});
+
+const Navigation: React.FC = () => {
+  const styles = useStyles();
   return (
-    <div
-      style={{
-        width: '100%',
-        position: 'fixed',
-        bottom: 0,
-        height: '2rem',
-        paddingTop: '0.25rem',
-        backgroundColor: 'black',
-        display: 'flex',
-        justifyContent: 'center'
-      }}
-      className='navigation-container'
-    >
-      <div
-        style={{
-          width: '60rem',
-          display: 'flex',
-          justifyContent: 'space-evenly'
-        }}
-      >
+    <div className={styles.navWrapper}>
+      <div className={styles.innerWrapper}>
         <a href='#root'>
           <HomeIcon htmlColor='white' />
         </a>
@@ -63,3 +68,5 @@ export const Navigation = () => {
     </div>
   );
 };
+
+export default Navigation;

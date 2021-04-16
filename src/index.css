@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'Cascadia Code Regular';
+  font-family: 'JetBrainsMono-Regular';
   font-style: normal;
   font-weight: normal;
-  src: local('Cascadia Code Regular'), url('Cascadia.woff') format('woff');
+  src: local('JetBrainsMono-Regular'), url('JetBrainsMono-Regular.woff2') format('woff2');
 }
 
 * {
   box-sizing: border-box;
-  font-family: 'Cascadia Code Regular', monospace;
+  font-family: 'JetBrainsMono-Regular', monospace;
 }
 
 body {

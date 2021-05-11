@@ -33,8 +33,9 @@ const useStyles = makeStyles({
     color: "black",
     display: "inline-block",
     alignSelf: "center",
+    marginLeft: 8,
   },
-  about: { maxWidth: 420, marginTop: "0.5rem", marginBottom: "0.5rem" },
+  about: { marginTop: "0.5rem", marginBottom: "0.5rem" },
   company: {
     textDecoration: "none",
     color: "black",
@@ -76,7 +77,12 @@ const Header: React.FC = () => {
         <p className={styles.about}>about me: {user?.bio}</p>
         <p className={styles.about}>
           company:{" "}
-          <a className={styles.company} href={user?.company}>
+          <a
+            className={styles.company}
+            href={user?.company}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {user?.company}
           </a>
         </p>

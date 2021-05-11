@@ -6,6 +6,7 @@ import Header from "./Header";
 import makeStyles from "@material-ui/styles/makeStyles/makeStyles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Navigation from "./Navigation";
+import Resume from "./Resume";
 
 const useStyles = makeStyles({
   main: {
@@ -15,6 +16,7 @@ const useStyles = makeStyles({
     fontSize: 18,
   },
 });
+
 const App: React.FC = () => {
   const styles = useStyles();
   return (
@@ -24,6 +26,7 @@ const App: React.FC = () => {
         <Header />
         <ProjectsContainer />
         <Navigation />
+        <Resume />
       </div>
     </>
   );

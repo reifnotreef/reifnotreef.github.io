@@ -9,14 +9,17 @@ const useStyles = makeStyles({
   projectWrapper: {
     borderTop: "1px solid black",
     paddingTop: "1rem",
+    "&:last-of-type": {
+      borderBottom: "1px solid black",
+    },
   },
   projectNameAndLinks: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-start",
     marginTop: 0,
-    marginBottom: '0.5rem',
+    marginBottom: "0.5rem",
   },
   projectName: {
     display: "inline-block",
@@ -24,24 +27,24 @@ const useStyles = makeStyles({
     fontSize: 20,
   },
   projectLinks: {
-    display: 'inline-grid',
-    gridTemplateColumns: 'auto auto',
-    gridTemplateRows: '1fr',
+    display: "inline-grid",
+    gridTemplateColumns: "auto auto",
+    gridTemplateRows: "1fr",
     gap: 12,
     marginLeft: 12,
-    alignItems: 'center',
+    alignItems: "center",
   },
   projectLink: {
     height: 24,
   },
   projectDescription: {
     maxWidth: 420,
-    marginTop: '0.5rem',
-    marginBottom: '0.5rem',
+    marginTop: "0.5rem",
+    marginBottom: "0.5rem",
   },
   projectLanguage: {
-    marginTop: '0.5rem',
-    marginBottom: '0.5rem',
+    marginTop: "0.5rem",
+    marginBottom: "0.5rem",
   },
   projectLanguages: {
     marginTop: 0,
@@ -62,7 +65,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <section className={styles.projectWrapper} key={project.id}>
       <div className={styles.projectNameAndLinks}>
-      <h3 className={styles.projectName}>{project.name}</h3>
+        <h3 className={styles.projectName}>{project.name}</h3>
         <div className={styles.projectLinks}>
           <a
             className={styles.projectLink}
@@ -84,9 +87,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           )}
         </div>
       </div>
-      <p className={styles.projectDescription}>
-        {project.description}
-      </p>
+      <p className={styles.projectDescription}>{project.description}</p>
       <p className={styles.projectLanguage}>Languages: </p>
       <ul className={styles.projectLanguages}>
         {project?.languages?.edges?.map((i, key) => (

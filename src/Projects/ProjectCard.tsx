@@ -38,7 +38,7 @@ const useStyles = makeStyles({
     height: 24,
   },
   projectDescription: {
-    maxWidth: 420,
+    width: "100%",
     marginTop: "0.5rem",
     marginBottom: "0.5rem",
   },

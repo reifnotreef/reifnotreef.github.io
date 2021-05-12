@@ -10,6 +10,7 @@ import Resume from "./Resume";
 
 const useStyles = makeStyles({
   main: {
+    width: "100%",
     margin: 0,
     boxSizing: "border-box",
     fontFamily: "JetBrains Mono",
@@ -26,7 +27,6 @@ const App: React.FC = () => {
         <Header />
         <ProjectsContainer />
         <Navigation />
-        <Resume />
       </div>
     </>
   );

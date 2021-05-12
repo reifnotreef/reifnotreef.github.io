@@ -57,7 +57,7 @@ const Navigation: React.FC = () => {
         >
           <LinkedInIcon htmlColor="white" />
         </a>
-        <a href="/Resume-BRH.md" target="_blank" rel="noopener noreferrer">
+        <a href="/Resume-BRH.pdf" target="_blank" rel="noopener noreferrer">
           <PictureAsPdfIcon htmlColor="white" />
         </a>
       </div>

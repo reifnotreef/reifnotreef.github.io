@@ -5,6 +5,7 @@ import makeStyles from "@material-ui/styles/makeStyles/makeStyles";
 
 const useStyles = makeStyles({
   resumeWrapper: {
+    width: "100%",
     paddingLeft: "2rem",
     paddingRight: "2rem",
     marginBottom: "3rem",
